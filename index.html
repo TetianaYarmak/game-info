@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>Game info</title>
+</head>
+
+<body>
+  <div class="game-information">
+    <header>
+      <nav>
+        <ul class="menu">
+          <li class="menu-item active">
+            <img src="images/info-icon.svg" alt="">
+            <h2>Information</h2>
+          </li>
+          <li class="menu-item inactive">
+            <img src="images/spades-icon.svg" alt="">
+            <h2>Ratings Info</h2>
+          </li>
+          <li class="menu-item inactive">
+            <img src="images/bag-icon.svg" alt="">
+            <h2>where to buy</h2>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="game-image">
+        <img src="images/game-image.jpg" alt="">
+        <div class="rating-stars" id="ratingStars">
+          <span class="star">
+            <svg class="icon">
+              <use href="images/star-icon.svg"></use>
+            </svg>
+          </span>
+          <span class="star">
+            <svg class="icon">
+              <use href="images/star-icon.svg"></use>
+            </svg>
+          </span>
+          <span class="star">
+            <svg class="icon">
+              <use href="images/star-icon.svg"></use>
+            </svg>
+          </span>
+          <span class="star">
+            <svg class="icon">
+              <use href="images/star-icon.svg"></use>
+            </svg>
+          </span>
+          <span class="star">
+            <svg class="icon">
+              <use href="images/star-icon.svg"></use>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="game-info">
+        <div class="game-name-circle">
+          <div class="game-name">
+            <h1>FarCry 6</h1>
+            <h3>First Released Oct 6, 2021</h3>
+          </div>
+          <div class="rating-circle" id="ratingCircle">
+            <span id="ratingValue">0.0</span>
+          </div>
+        </div>
+        <p>
+          Far Cry 6 is a 2021 action-adventure first-person shooter game developed by Ubisoft Toronto. It is the sixth
+          main installment in the Far Cry series and the successor Far Cry 5.
+        </p>
+        <div class="price-btn">
+          <div class="price">
+            <span class="discount">20% OFF!</span>
+            <span class="price-buy">$59.96</span>
+          </div>
+          <button>Buy it now</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

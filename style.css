@@ -1,0 +1,209 @@
+:root {
+  --deep-blue: #212534;
+  --dark-blue: #2b3040;
+  --inactive: #8d91a3;
+  --text: #b7bacd;
+  --yellow: #ffdd3f;
+  --light-green: #13e28d;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-blue);
+  color-scheme: var(--dark-blue);
+  background-image: url(images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-size: 1000px 860px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.game-information {
+  width: 600px;
+  height: 552px;
+}
+
+header {
+  height: 120px;
+  width: 100%;
+  background: var(--dark-blue);
+
+  .menu {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 28px;
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+    }
+
+    h2 {
+      font-size: 16px;
+      line-height: 175%;
+      text-transform: uppercase;
+    }
+
+    .active {
+      color: #fff;
+    }
+
+    .inactive {
+      color: var(--inactive);
+    }
+  }
+}
+
+main {
+  background: var(--deep-blue);
+  display: flex;
+  gap: 41px;
+  padding: 60px 40px;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.rating-stars {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.star {
+  color: var(--inactive);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.star.filled {
+  color: var(--yellow);
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+
+  .game-name-circle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 100%;
+    color: #fff;
+    padding-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 14px;
+    line-height: 143%;
+    color: #fff;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 157%;
+    color: var(--text);
+    margin: 40px 42px 50px 0px;
+  }
+}
+
+.price-btn {
+  display: flex;
+  gap: 50px;
+  padding-right: 13px;
+
+  .discount {
+    font-size: 12px;
+    line-height: 167%;
+    color: var(--yellow);
+  }
+
+  .price-buy {
+    font-size: 32px;
+    line-height: 100%;
+    color: #fff;
+  }
+
+  button {
+    background: var(--light-green);
+    border-radius: 2px;
+    border: none;
+    width: 155px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+.rating-circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 110%;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  /* Початковий фон (сіра рамка) */
+  background: conic-gradient(var(--light-green) 0%, #B7BACD 0%);
+}
+
+/* Створюємо "дірку" всередині, щоб це виглядало як рамка */
+.rating-circle::before {
+  content: "";
+  position: absolute;
+  /* Розмір менший на подвійну товщину рамки (75px - 8px = 67px) */
+  width: 67px;
+  height: 67px;
+  background-color: var(--deep-blue);
+  /* Колір фону, щоб перекрити центр */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Щоб текст (цифра) був поверх внутрішнього кола */
+.rating-circle span {
+  position: relative;
+  z-index: 1;
+}
