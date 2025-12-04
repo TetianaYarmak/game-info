@@ -40,7 +40,7 @@ stars.forEach((star, index) => {
 });
 
 // При завантаженні сторінки обнуляємо рейтинг
-window.addEventListener('load', () => {
+/* window.addEventListener('load', () => {
   ratings = [];
   updateAverage();
-});
+}); */
